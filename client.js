@@ -5,22 +5,22 @@ function getValue(condition) {
     const maxValue = 100;
 
     const person = {
-        name: 'Abhay'
+        name: 'Tom Brady'
     };
-    person.name = "John";
+    person.name = "Aaron Rodgers";
 
     console.log(person);
     
 
 // person is a const and cannot be changed; however you can change the values of person
 // person = {
-//     name: "John"
+//     name: "Aaron Rodgers"
 // }
 
     if (condition) {
         // maxValue = 120;
         let count = 10;
-        let myValue = "Abhay";
+        let myValue = "Michael Vick";
         console.log(myValue);
         return myValue;
     } else {
@@ -30,13 +30,17 @@ function getValue(condition) {
     }
 }
 
-//functions in loop
+
 for (let i = 0; i < 10; i++) {
-    //console.log(i);
+    console.log('i with let',i);
 }
 
-// i is still accessible here
-// console.log(i); //10
+for (var i = 0; i < 10; i++) {
+    console.log('i with let', i);
+}
+console.log('i with var', i); //i is now available outside of the for loop.
+
+
 
 var funcs = [];
 var object = {
