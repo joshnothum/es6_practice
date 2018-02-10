@@ -43,8 +43,6 @@ for (var i = 0; i < 10; i++) {
 }
 console.log('i with var', i); //i is now available outside of the for loop.
 
-
-
 var funcs = [];
 var object = {
     a: true,
