@@ -34,27 +34,31 @@ function getValue(condition) {
 
 
 for (let i = 0; i < 10; i++) {
-    console.log('i with let',i);
+    console.log('i with let in loop',i);
 }
-console.log(i, 'in i'); //i is undefined
+console.log(i, 'out of loop i with let'); //i is undefined
 
 for (var i = 0; i < 10; i++) {
-
+    console.log('i in loop with var', i);
+    
 }
-console.log('i with var', i); //i is now available outside of the for loop.
+console.log('i out of loop with var', i); //i is now available outside of the for loop.
 
 var funcs = [];
 var object = {
     a: true,
     b: true,
     c: true
-}
+};
 
 //Functions in loops
 for (const key in object) {
-    funcs.push(function () {
-        console.log('this is key', key);
-    });
+    funcs.push(function (value) {
+       return function () {
+           console.log(value);
+           
+       };
+    }(i));
 }
 
 funcs.forEach(function (func) {
