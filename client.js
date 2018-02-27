@@ -101,7 +101,7 @@ function makeRequest(url, timeout, callback) {
 
     console.log(url, 'url');
     console.log(callback, 'callback');
-    console.log(timeout, '');
+    console.log(timeout, 'timeout');
     
     
     
@@ -110,3 +110,25 @@ function makeRequest(url, timeout, callback) {
 makeRequest("/foo");
 console.log('make request with timeout passed');
 makeRequest("/foo", 1000);
+console.log('make request with timeout passed and callback passed');
+makeRequest("/foo", 1000, function(){});
+
+//makeRequest(); needs a parameter or will error
+
+
+
+//Default params behavior on arguments
+function mixArguments(firstParameter, secondParameter) {
+    // "use strict";
+
+    console.log(arguments.length);
+    console.log('check the argument object at [1]',firstParameter === arguments[0]);
+    console.log('check the argument object at[1]', secondParameter === arguments[1]);
+    firstParameter = "c";
+    secondParameter = "d";
+    console.log('after you change the parameter', firstParameter === arguments[0]);
+    console.log('secondParameter after you change 2nd', secondParameter === arguments[1]);
+}
+console.log('call mix arguments without use strict');
+
+mixArguments("a", "b");
