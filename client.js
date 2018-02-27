@@ -98,6 +98,15 @@ function makeRequest(url, timeout, callback) {
     timeout = timeout || 3000;
     callback = callback || function (){
     };
+
+    console.log(url, 'url');
+    console.log(callback, 'callback');
+    console.log(timeout, '');
+    
+    
+    
 }
 
 makeRequest("/foo");
+console.log('make request with timeout passed');
+makeRequest("/foo", 1000);
