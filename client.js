@@ -90,3 +90,14 @@ console.log('window.hello', window.hello);
 
 console.log('hola with const', hola);
 console.log('window.hola', window.hola);
+
+
+// function from es5; would need to pass parameter and option for if it isn't provided. Works unless timeout is zero.
+function makeRequest(url, timeout, callback) {
+    // the rest of the function
+    timeout = timeout || 3000;
+    callback = callback || function (){
+    };
+}
+
+makeRequest("/foo");
